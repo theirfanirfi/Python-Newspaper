@@ -90,7 +90,7 @@
                     <p style="font-size:20px;"><label>Publication Date: </label> {{article.publish_date}}</p>
                     <p style="font-size:20px;"><label>Images Links: </label> {{article.images}}</p>
                     <p style="font-size:20px;"><label>Article Video(s) Links: </label> {{article.movies}}</p>
-                    <p style="font-size:20px;"><label>Text: </label><br/> {{article.text}}</p>
+                    <p id="text" style="font-size:20px;"><label>Text: </label><br/> {{article.text}}</p>
                 </code>
               
 
@@ -144,6 +144,11 @@
 
             }
         }
+
+        $('#text').mouseup(function(){
+            var text = window.getSelection();
+            alert(window.getSelection());
+        });
     </script>
 </body>
 
